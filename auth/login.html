@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş - Mux Editor Clan</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>MUX</h1>
+                <p>Editor Clan</p>
+            </div>
+            
+            <div class="login-form">
+                <h2>Giriş Yap</h2>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Kullanıcı Adı</label>
+                        <input type="text" id="username" placeholder="Kullanıcı adınızı girin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Şifre</label>
+                        <input type="password" id="password" placeholder="Şifrenizi girin" required>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        🔐 Giriş Yap
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>veya</span>
+                </div>
+                
+                <button class="discord-login-btn" onclick="loginWithDiscord()">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" style="width: 20px; height: 20px;">
+                    Discord ile Giriş Yap
+                </button>
+                
+                <div class="register-link">
+                    <p>Hesabınız yok mu? <a href="register.html">Kayıt Ol</a></p>
+                </div>
+                
+                <div class="demo-accounts">
+                    <h3>Demo Hesaplar</h3>
+                    <div class="demo-buttons">
+                        <button class="demo-btn admin-demo" onclick="fillAdminDemo()">
+                            👑 Admin Hesabı
+                        </button>
+                        <button class="demo-btn user-demo" onclick="fillUserDemo()">
+                            👤 Kullanıcı Hesabı
+                        </button>
+                    </div>
+                    <p class="demo-info">Demo hesapları ile sistemi test edebilirsiniz</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="background-animation">
+            <div class="floating-elements">
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

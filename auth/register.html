@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol - Mux Editor Clan</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>MUX</h1>
+                <p>Editor Clan</p>
+            </div>
+            
+            <div class="login-form">
+                <h2>Kayıt Ol</h2>
+                
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="fullname">Ad Soyad</label>
+                        <input type="text" id="fullname" placeholder="Ad ve soyadınızı girin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" placeholder="E-posta adresinizi girin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Kullanıcı Adı</label>
+                        <input type="text" id="username" placeholder="Kullanıcı adı seçin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Şifre</label>
+                        <input type="password" id="password" placeholder="Güçlü bir şifre girin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Şifre Tekrar</label>
+                        <input type="password" id="confirmPassword" placeholder="Şifrenizi tekrar girin" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            <a href="#" onclick="showTerms()">Kullanım şartlarını</a> kabul ediyorum
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        🎯 Hesap Oluştur
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>veya</span>
+                </div>
+                
+                <button class="discord-login-btn" onclick="registerWithDiscord()">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" style="width: 20px; height: 20px;">
+                    Discord ile Kayıt Ol
+                </button>
+                
+                <div class="register-link">
+                    <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="background-animation">
+            <div class="floating-elements">
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+                <div class="element"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Kullanım Şartları</h2>
+                <span class="close" onclick="closeTerms()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>MUX Editor Clan Kullanım Şartları</h3>
+                
+                <h4>1. Genel Şartlar</h4>
+                <p>Bu hizmetleri kullanarak aşağıdaki şartları kabul etmiş sayılırsınız:</p>
+                <ul>
+                    <li>18 yaşından büyük olmalısınız</li>
+                    <li>Doğru ve güncel bilgiler vermelisiniz</li>
+                    <li>Hesabınızın güvenliğinden siz sorumlusunuz</li>
+                </ul>
+                
+                <h4>2. XML Paketleri</h4>
+                <p>Satın aldığınız XML paketleri için:</p>
+                <ul>
+                    <li>Kişisel kullanım içindir</li>
+                    <li>Yeniden satış yapılamaz</li>
+                    <li>Telif hakları korunmaktadır</li>
+                </ul>
+                
+                <h4>3. Gizlilik</h4>
+                <p>Kişisel bilgileriniz güvendedir ve üçüncü taraflarla paylaşılmaz.</p>
+                
+                <h4>4. Sorumluluk</h4>
+                <p>Hizmetlerimizi kendi sorumluluğunuzda kullanırsınız.</p>
+                
+                <p><strong>Son güncellenme:</strong> 15 Ekim 2025</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeTerms()" class="modal-btn">Anladım</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

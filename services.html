@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MUX Editor Clan Hizmetleri - Video düzenleme, XML paketleri, tasarım hizmetleri">
+    <meta name="keywords" content="video editing, xml paketleri, thumbnail tasarım, logo tasarım">
+    <title>Hizmetlerimiz - MUX Editor Clan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">MUX</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>MUX <span class="brand-accent">CLAN</span></h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Ana Sayfa</a>
+                <a href="/services" class="nav-link active">Hizmetler</a>
+                <a href="/packages" class="nav-link">XML Paketleri</a>
+                <a href="/about" class="nav-link">Hakkımızda</a>
+                <a href="/contact" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Hizmetlerimiz</h1>
+            <p>Profesyonel video düzenleme ve tasarım alanında sunduğumuz kaliteli hizmetler</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Düzenleme</h3>
+                    <p>Profesyonel video düzenleme hizmetleri ile içeriklerinizi mükemmelleştirin. 4K kalitesinde, sinematik görünüm ve profesyonel renk düzeltmesi ile videolarınız bir sonraki seviyeye taşıyın.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 4K Video Düzenleme</li>
+                        <li><i class="fas fa-check"></i> Renk Düzeltmesi</li>
+                        <li><i class="fas fa-check"></i> Ses Düzenleme</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics</li>
+                        <li><i class="fas fa-check"></i> Hızlı Teslimat</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺150</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>XML Paketleri</h3>
+                    <p>Premiere Pro için özel tasarlanmış premium XML efekt paketleri. Geçişler, efektler ve animasyonlarla videolarınızı profesyonel hale getirin.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Premium Efektler</li>
+                        <li><i class="fas fa-check"></i> Smooth Transitions</li>
+                        <li><i class="fas fa-check"></i> Text Animasyonları</li>
+                        <li><i class="fas fa-check"></i> Lower Thirds</li>
+                        <li><i class="fas fa-check"></i> Kolay Kurulum</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺29</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Thumbnail Tasarım</h3>
+                    <p>YouTube ve sosyal medya için dikkat çekici thumbnail tasarımları. Yüksek tıklama oranı sağlayan, markanıza uygun profesyonel tasarımlar.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Özel Tasarım</li>
+                        <li><i class="fas fa-check"></i> Yüksek Çözünürlük</li>
+                        <li><i class="fas fa-check"></i> A/B Test Seçenekleri</li>
+                        <li><i class="fas fa-check"></i> Revizyon Hakkı</li>
+                        <li><i class="fas fa-check"></i> Hızlı Teslimat</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺50</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Logo Tasarım</h3>
+                    <p>Markanıza özel, modern ve profesyonel logo tasarımları. Vektörel format, farklı versiyonlar ve marka kimlik rehberi ile teslim.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Vektörel Format</li>
+                        <li><i class="fas fa-check"></i> Farklı Versiyonlar</li>
+                        <li><i class="fas fa-check"></i> Renk Paletleri</li>
+                        <li><i class="fas fa-check"></i> Marka Rehberi</li>
+                        <li><i class="fas fa-check"></i> Telif Hakkı</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺200</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>VFX & Animasyon</h3>
+                    <p>Görsel efektler ve animasyonlar ile videolarınıza sinematik dokunuş. Green screen, 3D efektler ve özel animasyonlar.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Green Screen</li>
+                        <li><i class="fas fa-check"></i> 3D Efektler</li>
+                        <li><i class="fas fa-check"></i> Particle Sistemler</li>
+                        <li><i class="fas fa-check"></i> Compositing</li>
+                        <li><i class="fas fa-check"></i> Özel Animasyonlar</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺300</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Ses Düzenleme</h3>
+                    <p>Profesyonel ses düzenleme ve mixing hizmetleri. Gürültü giderme, ses kalitesi iyileştirme ve müzik prodüksiyonu.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Gürültü Giderme</li>
+                        <li><i class="fas fa-check"></i> EQ & Compression</li>
+                        <li><i class="fas fa-check"></i> Mixing & Mastering</li>
+                        <li><i class="fas fa-check"></i> Müzik Prodüksiyonu</li>
+                        <li><i class="fas fa-check"></i> Podcasts</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-from">Başlangıç:</span>
+                        <span class="price">₺100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Çalışma Sürecimiz</h2>
+                <p>Projelerinizi nasıl hayata geçiriyoruz</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Konsept & Planlama</h3>
+                    <p>Projenizin ihtiyaçlarını anlıyor, yaratıcı konseptler geliştiriyoruz.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Tasarım & Üretim</h3>
+                    <p>En son teknolojiler ve yaratıcı yaklaşımlarla projelerinizi hayata geçiriyoruz.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Revizyon & Teslimat</h3>
+                    <p>Geri bildirimlerinizi alıyor, mükemmel sonuç için gerekli düzenlemeleri yapıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Projenizi Başlatalım</h2>
+                <p>Yaratıcı fikirlerinizi hayata geçirmek için bizimle iletişime geçin</p>
+                <a href="/contact" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Hemen Başla
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MUX <span class="brand-accent">CLAN</span></h3>
+                    <p>Profesyonel video düzenleme ve tasarım hizmetleri</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Linkler</h4>
+                        <a href="/">Ana Sayfa</a>
+                        <a href="/services">Hizmetler</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/contact">İletişim</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Hizmetler</h4>
+                        <a href="/services">Video Düzenleme</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/services">Thumbnail Tasarım</a>
+                        <a href="/services">Logo Tasarım</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUX Editor Clan. Tüm hakları saklıdır.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

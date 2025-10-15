@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MUX Editor Clan Satın Alma - XML Paketleri ve Hizmet Satın Al">
+    <title>Satın Al - MUX Editor Clan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">MUX</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>MUX <span class="brand-accent">CLAN</span></h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Ana Sayfa</a>
+                <a href="/services" class="nav-link">Hizmetler</a>
+                <a href="/packages" class="nav-link">XML Paketleri</a>
+                <a href="/about" class="nav-link">Hakkımızda</a>
+                <a href="/contact" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Satın Al</h1>
+            <p>Premium XML paketleri ve profesyonel hizmetlerimizi güvenli şekilde satın alın</p>
+        </div>
+    </section>
+
+    <!-- Purchase Section -->
+    <section class="purchase-section">
+        <div class="container">
+            <div class="purchase-content">
+                <!-- Package Selection -->
+                <div class="purchase-packages">
+                    <h2>Paket Seçimi</h2>
+                    <div class="packages-grid">
+                        <div class="purchase-card" data-package="basic" data-price="29">
+                            <div class="package-header">
+                                <h3>Basics</h3>
+                                <div class="price">₺29</div>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 15 Temel Efekt</li>
+                                <li><i class="fas fa-check"></i> 5 Smooth Transitions</li>
+                                <li><i class="fas fa-check"></i> 5 Renk Düzeltmesi</li>
+                                <li><i class="fas fa-check"></i> 3 Lower Thirds</li>
+                                <li><i class="fas fa-check"></i> Temel Destek</li>
+                            </ul>
+                            <button class="btn btn-outline select-package">Seç</button>
+                        </div>
+
+                        <div class="purchase-card featured" data-package="premium" data-price="59">
+                            <div class="package-badge">En Popüler</div>
+                            <div class="package-header">
+                                <h3>Premium</h3>
+                                <div class="price">₺59</div>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 50+ Premium Efekt</li>
+                                <li><i class="fas fa-check"></i> 15 Profesyonel Geçişler</li>
+                                <li><i class="fas fa-check"></i> 20 Renk Düzeltmesi</li>
+                                <li><i class="fas fa-check"></i> 10 Motion Graphics</li>
+                                <li><i class="fas fa-check"></i> 8 Lower Thirds</li>
+                                <li><i class="fas fa-check"></i> 24/7 Destek</li>
+                            </ul>
+                            <button class="btn btn-primary select-package">Seç</button>
+                        </div>
+
+                        <div class="purchase-card" data-package="pro" data-price="99">
+                            <div class="package-header">
+                                <h3>Pro</h3>
+                                <div class="price">₺99</div>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 100+ Pro Efekt</li>
+                                <li><i class="fas fa-check"></i> 25 Özel Animasyonlar</li>
+                                <li><i class="fas fa-check"></i> Sınırsız Renk Düzeltmesi</li>
+                                <li><i class="fas fa-check"></i> 15 3D Efektler</li>
+                                <li><i class="fas fa-check"></i> 12 Lower Thirds</li>
+                                <li><i class="fas fa-check"></i> Özel Destek</li>
+                            </ul>
+                            <button class="btn btn-outline select-package">Seç</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Form -->
+                <div class="purchase-form" id="purchaseForm" style="display: none;">
+                    <h2>Ödeme Bilgileri</h2>
+                    
+                    <!-- Selected Package Info -->
+                    <div class="selected-package">
+                        <h3 id="selectedPackageName"></h3>
+                        <div class="package-summary">
+                            <div class="summary-item">
+                                <span>Paket Fiyatı:</span>
+                                <span id="packagePrice">₺0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>KDV (%18):</span>
+                                <span id="taxAmount">₺0</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span><strong>Toplam:</strong></span>
+                                <span id="totalPrice"><strong>₺0</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="checkoutForm">
+                        <!-- Personal Info -->
+                        <div class="form-section">
+                            <h4>Kişisel Bilgiler</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Ad *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Soyad *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+90 555 123 45 67">
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h4>Ödeme Yöntemi</h4>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="card" checked>
+                                    <div class="payment-card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Kredi Kartı</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="bank">
+                                    <div class="payment-card">
+                                        <i class="fas fa-university"></i>
+                                        <span>Banka Havalesi</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="papara">
+                                    <div class="payment-card">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>Papara</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Card Details (shown when card is selected) -->
+                        <div class="form-section card-details">
+                            <h4>Kart Bilgileri</h4>
+                            <div class="form-group">
+                                <label for="cardNumber">Kart Numarası *</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Son Kullanma *</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardName">Kart Üzerindeki İsim *</label>
+                                <input type="text" id="cardName" placeholder="AD SOYAD">
+                            </div>
+                        </div>
+
+                        <!-- Terms -->
+                        <div class="form-section">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" required>
+                                <span class="checkmark"></span>
+                                <a href="#" style="color: var(--primary-color);">Kullanım şartlarını</a> ve <a href="#" style="color: var(--primary-color);">gizlilik politikasını</a> kabul ediyorum
+                            </label>
+                            
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter">
+                                <span class="checkmark"></span>
+                                Yeni ürünler ve kampanyalar hakkında bilgi almak istiyorum
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full purchase-btn">
+                            <i class="fas fa-lock"></i>
+                            Güvenli Ödeme Yap
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Info -->
+    <section class="security-section">
+        <div class="container">
+            <div class="security-features">
+                <div class="security-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>SSL Güvenlik</h4>
+                    <p>256-bit SSL şifreleme</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-lock"></i>
+                    <h4>Güvenli Ödeme</h4>
+                    <p>Kart bilgileri saklanmaz</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-undo"></i>
+                    <h4>Para İade Garantisi</h4>
+                    <p>7 gün içinde iade</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>7/24 Destek</h4>
+                    <p>Anında yardım</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MUX <span class="brand-accent">CLAN</span></h3>
+                    <p>Profesyonel video düzenleme ve tasarım hizmetleri</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Linkler</h4>
+                        <a href="/">Ana Sayfa</a>
+                        <a href="/services">Hizmetler</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/contact">İletişim</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Hizmetler</h4>
+                        <a href="/services">Video Düzenleme</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/services">Thumbnail Tasarım</a>
+                        <a href="/services">Logo Tasarım</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUX Editor Clan. Tüm hakları saklıdır.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Purchase page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectButtons = document.querySelectorAll('.select-package');
+            const purchaseForm = document.getElementById('purchaseForm');
+            const selectedPackageElement = document.getElementById('selectedPackageName');
+            const packagePriceElement = document.getElementById('packagePrice');
+            const taxAmountElement = document.getElementById('taxAmount');
+            const totalPriceElement = document.getElementById('totalPrice');
+            
+            // Package selection
+            selectButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.purchase-card');
+                    const packageName = card.querySelector('h3').textContent;
+                    const packagePrice = parseInt(card.dataset.price);
+                    const taxAmount = Math.round(packagePrice * 0.18);
+                    const totalAmount = packagePrice + taxAmount;
+                    
+                    // Update UI
+                    selectedPackageElement.textContent = packageName + ' Paketi';
+                    packagePriceElement.textContent = '₺' + packagePrice;
+                    taxAmountElement.textContent = '₺' + taxAmount;
+                    totalPriceElement.textContent = '₺' + totalAmount;
+                    
+                    // Show form
+                    purchaseForm.style.display = 'block';
+                    purchaseForm.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Update card selection
+                    document.querySelectorAll('.purchase-card').forEach(c => c.classList.remove('selected'));
+                    card.classList.add('selected');
+                });
+            });
+            
+            // Payment method toggle
+            const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
+            const cardDetails = document.querySelector('.card-details');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', function() {
+                    if (this.value === 'card') {
+                        cardDetails.style.display = 'block';
+                    } else {
+                        cardDetails.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Card number formatting
+            const cardNumberInput = document.getElementById('cardNumber');
+            if (cardNumberInput) {
+                cardNumberInput.addEventListener('input', function() {
+                    let value = this.value.replace(/\s/g, '').replace(/\D/g, '');
+                    value = value.substring(0, 16);
+                    value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+                    this.value = value;
+                });
+            }
+            
+            // Expiry date formatting
+            const expiryInput = document.getElementById('expiry');
+            if (expiryInput) {
+                expiryInput.addEventListener('input', function() {
+                    let value = this.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                    this.value = value;
+                });
+            }
+            
+            // Form submission
+            const checkoutForm = document.getElementById('checkoutForm');
+            checkoutForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const submitBtn = this.querySelector('.purchase-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> İşlem Yapılıyor...';
+                submitBtn.disabled = true;
+                
+                // Simulate payment process
+                setTimeout(() => {
+                    alert('Ödeme başarılı! Size e-posta ile indirme linki gönderilecek.');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

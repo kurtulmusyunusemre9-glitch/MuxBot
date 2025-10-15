@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MUX Editor Clan İletişim - Projeleriniz için bizimle iletişime geçin">
+    <title>İletişim - MUX Editor Clan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">MUX</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>MUX <span class="brand-accent">CLAN</span></h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Ana Sayfa</a>
+                <a href="/services" class="nav-link">Hizmetler</a>
+                <a href="/packages" class="nav-link">XML Paketleri</a>
+                <a href="/about" class="nav-link">Hakkımızda</a>
+                <a href="/contact" class="nav-link active">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>İletişim</h1>
+            <p>Projeleriniz için bizimle iletişime geçin ve hayal ettiğiniz çalışmaları hayata geçirin</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Discord</h4>
+                            <p>MUX Editor Clan</p>
+                            <small>En hızlı iletişim kanalımız</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>E-posta</h4>
+                            <p>info@muxclan.com</p>
+                            <small>24 saat içinde yanıtlarız</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Instagram</h4>
+                            <p>@muxeditorclan</p>
+                            <small>Çalışmalarımızı görüntüleyin</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>YouTube</h4>
+                            <p>MUX Editor Clan</p>
+                            <small>Tutorial ve örnekler</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-header">
+                            <h3>Projenizi Anlatan</h3>
+                            <p>Size en uygun çözümü sunabilmemiz için projeniz hakkında detayları paylaşın</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Adınız *</label>
+                                <input type="text" id="name" name="name" placeholder="Adınızı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta *</label>
+                                <input type="email" id="email" name="email" placeholder="E-posta adresiniz" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Hizmet Türü</label>
+                            <select id="service" name="service">
+                                <option value="">Hizmet seçiniz</option>
+                                <option value="video-editing">Video Düzenleme</option>
+                                <option value="xml-packages">XML Paketleri</option>
+                                <option value="thumbnail-design">Thumbnail Tasarım</option>
+                                <option value="logo-design">Logo Tasarım</option>
+                                <option value="motion-graphics">Motion Graphics</option>
+                                <option value="other">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Bütçe Aralığınız</label>
+                            <select id="budget" name="budget">
+                                <option value="">Bütçe seçiniz</option>
+                                <option value="0-500">₺0 - ₺500</option>
+                                <option value="500-1000">₺500 - ₺1.000</option>
+                                <option value="1000-2500">₺1.000 - ₺2.500</option>
+                                <option value="2500-5000">₺2.500 - ₺5.000</option>
+                                <option value="5000+">₺5.000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Proje Detayları *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Projeniz hakkında detaylı bilgi verin. Ne tür bir çalışma istiyorsunuz? Hangi tarzı tercih ediyorsunuz? Teslimat tarihi gibi özel isteklerinizi belirtebilirsiniz." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span class="checkmark"></span>
+                                Yeni XML paketleri ve kampanyalardan haberdar olmak istiyorum
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sık Sorulan Sorular</h2>
+                <p>İletişim ile ilgili merak ettikleriniz</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Ne kadar sürede geri dönüş yapıyorsunuz?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Discord üzerinden gönderilen mesajlara genellikle 1-2 saat içinde, e-posta mesajlarına ise 24 saat içinde yanıt veriyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Proje fiyatları nasıl belirleniyor?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Her proje kendine özeldir. Projenizin kapsamı, süresi, karmaşıklığı ve teslimat tarihi gibi faktörlere göre özel fiyat teklifi hazırlarız.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Revizyon hakkım var mı?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet! Tüm projelerimizde 2 revizyon hakkı bulunmaktadır. Ek revizyon talepleri için ayrı ücretlendirme yapılır.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Hangi ödeme yöntemlerini kabul ediyorsunuz?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Banka havalesi, EFT, kredi kartı ve dijital cüzdan (Papara, İninal) ile ödeme kabul etmekteyiz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hızlı İletişim</h2>
+                <p>Acil projeleriniz için doğrudan iletişim kanallarımız</p>
+            </div>
+            
+            <div class="quick-contact-grid">
+                <a href="#" class="quick-contact-item">
+                    <div class="quick-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h4>Discord'da Sohbet</h4>
+                    <p>Anında yanıt alın</p>
+                </a>
+                
+                <a href="#" class="quick-contact-item">
+                    <div class="quick-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>+90 555 123 45 67</p>
+                </a>
+                
+                <a href="#" class="quick-contact-item">
+                    <div class="quick-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Görüşme Planlayın</h4>
+                    <p>Video call ile detay</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MUX <span class="brand-accent">CLAN</span></h3>
+                    <p>Profesyonel video düzenleme ve tasarım hizmetleri</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Linkler</h4>
+                        <a href="/">Ana Sayfa</a>
+                        <a href="/services">Hizmetler</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/contact">İletişim</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Hizmetler</h4>
+                        <a href="/services">Video Düzenleme</a>
+                        <a href="/packages">XML Paketleri</a>
+                        <a href="/services">Thumbnail Tasarım</a>
+                        <a href="/services">Logo Tasarım</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUX Editor Clan. Tüm hakları saklıdır.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

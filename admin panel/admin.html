@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Mux Editor Clan</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MUX ADMIN</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Ana Sayfa</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#sales">Satışlar</a></li>
+                <li><a href="#xmls">XML Yönetimi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-login" id="adminLogin">
+            <div class="login-form">
+                <h2>🔐 Admin Girişi</h2>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label>Admin Email</label>
+                        <input type="email" id="adminEmail" placeholder="admin@muxclan.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" id="adminPassword" placeholder="Şifrenizi girin" required>
+                    </div>
+                    <button type="submit" class="admin-login-btn">Giriş Yap</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="admin-panel" id="adminPanel" style="display: none;">
+            <section id="dashboard" class="admin-section">
+                <h2>📊 Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Toplam Satış</h3>
+                        <div class="stat-number" id="totalSales">₺0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Bu Ay Satış</h3>
+                        <div class="stat-number" id="monthlySales">₺0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Toplam Müşteri</h3>
+                        <div class="stat-number" id="totalCustomers">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>En Çok Satan</h3>
+                        <div class="stat-text" id="bestSeller">Premium Paket</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sales" class="admin-section">
+                <h2>💰 Satış Geçmişi</h2>
+                <div class="sales-controls">
+                    <button onclick="exportSales()" class="export-btn">📄 Excel'e Aktar</button>
+                    <button onclick="clearSales()" class="clear-btn">🗑️ Geçmişi Temizle</button>
+                </div>
+                <div class="sales-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Müşteri</th>
+                                <th>Email</th>
+                                <th>Paket</th>
+                                <th>Fiyat</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salesTableBody">
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="xmls" class="admin-section">
+                <h2>📁 XML Paket Yönetimi</h2>
+                <div class="xml-manager">
+                    <div class="xml-upload">
+                        <h3>Yeni XML Ekle</h3>
+                        <form id="xmlUploadForm">
+                            <select id="xmlPackageType" required>
+                                <option value="">Paket Seç</option>
+                                <option value="basic">Basic Paket</option>
+                                <option value="premium">Premium Paket</option>
+                                <option value="pro">Pro Paket</option>
+                            </select>
+                            <input type="file" id="xmlFile" accept=".xml" multiple required>
+                            <button type="submit">XML Yükle</button>
+                        </form>
+                    </div>
+                    
+                    <div class="xml-list">
+                        <h3>Mevcut XML'ler</h3>
+                        <div id="xmlFilesList">
+                            <!-- JavaScript ile doldurulacak -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="admin-actions">
+                <button onclick="adminLogout()" class="logout-btn">🚪 Çıkış Yap</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

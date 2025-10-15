@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MUX Editor Clan - Profesyonel video düzenleme ve XML paketleri">
+    <meta name="keywords" content="xml, video editing, premiere pro, effects, transitions, mux clan">
+    <meta property="og:title" content="MUX Editor Clan - Profesyonel Video Düzenleme">
+    <meta property="og:description" content="Premium XML paketleri ve profesyonel video düzenleme hizmetleri">
+    <meta property="og:image" content="assets/preview.jpg">
+    
+    <title>MUX Editor Clan - Profesyonel Video Düzenleme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">MUX</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>MUX <span class="brand-accent">CLAN</span></h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link active">Ana Sayfa</a>
+                <a href="/services" class="nav-link">Hizmetler</a>
+                <a href="/packages" class="nav-link">XML Paketleri</a>
+                <a href="/about" class="nav-link">Hakkımızda</a>
+                <a href="/contact" class="nav-link">İletişim</a>
+                <div class="auth-section">
+                    <div class="user-info" id="userInfo" style="display: none;">
+                        <span class="user-name" id="userName">Kullanıcı</span>
+                        <button class="logout-btn" onclick="logout()">Çıkış</button>
+                    </div>
+                    <div class="login-section" id="loginSection">
+                        <a href="/auth/login" class="nav-link login-link">🔐 Giriş Yap</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Profesyonel <span class="text-gradient">Video Düzenleme</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Premium XML paketleri, efektler ve özel tasarım hizmetleri ile projelerinizi bir sonraki seviyeye taşıyın
+                </p>
+                <div class="hero-buttons">
+                    <a href="/packages" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        XML Paketlerine Bak
+                    </a>
+                    <button class="btn btn-secondary" id="discordBtn">
+                        <i class="fab fa-discord"></i>
+                        Discord Botunu Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-video"></i>
+                    <span>4K Video Editing</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-magic"></i>
+                    <span>Premium Effects</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-palette"></i>
+                    <span>Custom Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Section -->
+    <section class="quick-nav-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hizmetlerimizi Keşfedin</h2>
+                <p>Profesyonel video düzenleme ve tasarım çözümlerimize göz atın</p>
+            </div>
+            
+            <div class="quick-nav-grid">
+                <a href="/services" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Tüm Hizmetler</h3>
+                    <p>Video düzenleme, thumbnail tasarım, logo tasarım ve daha fazlası</p>
+                    <div class="nav-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="/packages" class="nav-card featured-nav">
+                    <div class="nav-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>XML Paketleri</h3>
+                    <p>Premiere Pro için premium efekt paketleri ve geçişler</p>
+                    <div class="nav-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="/about" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Hakkımızda</h3>
+                    <p>Ekibimizi tanıyın ve başarı hikayelerimizi keşfedin</p>
+                    <div class="nav-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="/contact" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>İletişim</h3>
+                    <p>Projeleriniz için bizimle iletişime geçin</p>
+                    <div class="nav-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Neden MUX Clan?</h2>
+                <p>Profesyonel video editörleri tarafından tercih ediliyoruz</p>
+            </div>
+            
+            <div class="features-preview-grid">
+                <div class="feature-preview">
+                    <div class="feature-number">500+</div>
+                    <h4>Mutlu Müşteri</h4>
+                    <p>Başarılı projeler</p>
+                </div>
+                
+                <div class="feature-preview">
+                    <div class="feature-number">50+</div>
+                    <h4>XML Paketi</h4>
+                    <p>Premium efektler</p>
+                </div>
+                
+                <div class="feature-preview">
+                    <div class="feature-number">24/7</div>
+                    <h4>Destek</h4>
+                    <p>Sürekli yardım</p>
+                </div>
+                
+                <div class="feature-preview">
+                    <div class="feature-number">4K</div>
+                    <h4>Kalite</h4>
+                    <p>Yüksek çözünürlük</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MUX <span class="brand-accent">CLAN</span></h3>
+                    <p>Profesyonel video düzenleme ve tasarım hizmetleri</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Linkler</h4>
+                        <a href="#hero">Ana Sayfa</a>
+                        <a href="#services">Hizmetler</a>
+                        <a href="#packages">Paketler</a>
+                        <a href="#contact">İletişim</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Hizmetler</h4>
+                        <a href="#services">Video Düzenleme</a>
+                        <a href="#packages">XML Paketleri</a>
+                        <a href="#services">Thumbnail Tasarım</a>
+                        <a href="#services">Logo Tasarım</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUX Editor Clan. Tüm hakları saklıdır.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
